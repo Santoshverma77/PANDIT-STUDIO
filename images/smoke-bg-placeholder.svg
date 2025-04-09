@@ -1,0 +1,17 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="smoke" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" />
+      <feGaussianBlur in="noise" stdDeviation="20" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f5f5f5" />
+  <rect width="100%" height="100%" fill="#e0e0e0" filter="url(#smoke)" opacity="0.7" />
+  <text x="50%" y="50%" font-family="Arial" font-size="24" text-anchor="middle" fill="#999">
+    Placeholder for Smoke Background
+  </text>
+  <text x="50%" y="55%" font-family="Arial" font-size="16" text-anchor="middle" fill="#999">
+    Replace with actual smoke image from Envato Elements
+  </text>
+</svg> 
