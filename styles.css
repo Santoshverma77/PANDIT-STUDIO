@@ -692,32 +692,129 @@ section:not(.equipment-section)::before {
     transform: scale(1.2) translateZ(10px);
 }
 
+/* Enhanced Mobile Styles */
 @media (max-width: 768px) {
+    /* Global adjustments */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.8rem; }
+
+    /* Navigation */
+    nav {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Hero section */
+    .hero-content {
+        margin-top: 15vh;
+        padding: 1rem;
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    /* Grid layouts */
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .booking-container, 
+    .contact-container,
     .leadership-container {
         grid-template-columns: 1fr;
     }
     
-    .leader-image {
-        width: 250px;
-    height: 250px;
+    /* Cards */
+    .equipment-card,
+    .album-card, 
+    .service-card, 
+    .leader-card, 
+    .team-member {
+        min-width: auto;
+        margin-bottom: 1.5rem;
     }
     
-    .leader-info {
-        padding: 2rem;
-        text-align: center;
+    /* Images */
+    .leader-image,
+    .member-image {
+        width: 200px;
+        height: 200px;
     }
     
-    .leader-info h3 {
-        font-size: 2.2rem;
+    /* Buttons & Forms */
+    .cta-button, 
+    .album-cta, 
+    .submit-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
     
-    .leader-role {
-        font-size: 1.2rem;
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        padding: 0.8rem;
     }
     
-    .leader-social {
-        justify-content: center;
+    /* Hide decorative elements */
+    .equipment-section::before,
+    .equipment-section::after {
+        display: none;
     }
+    
+    /* Touch targets */
+    a, button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* Very small devices (480px and below) */
+@media (max-width: 480px) {
+    /* Single column layouts */
+    .equipment-grid, 
+    .albums-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Font sizes */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    
+    /* Navigation already handled in 768px media query */
+    
+    /* Forms already handled in 768px media query */
+    
+    /* Touch targets already handled in 768px media query */
 }
 
 /* Animation Section */
@@ -814,6 +911,7 @@ section:not(.equipment-section)::before {
     box-shadow: 0 5px 15px var(--shadow-color);
     transform-style: preserve-3d;
     position: relative;
+    transform: translateX(-30px);
 }
 
 .cta-button:hover {
